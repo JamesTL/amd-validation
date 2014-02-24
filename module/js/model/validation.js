@@ -1,10 +1,15 @@
 // Define the module.
 define(
     [
-        /* No dependencies. */
+        /* Any dependencies? Leave empty if none */
     ],
+
     function(){
         'use strict';
+
+       // var  valid_email_regex= /^(?:[\w\!\#\$\%\&\'\*\+\-\/\=\?\^\`\{\|\}\~]+\.)*[\w\!\#\$\%\&\'\*\+\-\/\=\?\^\`\{\|\}\~]+@(?:(?:(?:[a-zA-Z0-9](?:[a-zA-Z0-9\-](?!\.)){0,61}[a-zA-Z0-9]?\.)+[a-zA-Z0-9](?:[a-zA-Z0-9\-](?!$)){0,61}[a-zA-Z0-9]?)|(?:\[(?:(?:[01]?\d{1,2}|2[0-4]\d|25[0-5])\.){3}(?:[01]?\d{1,2}|2[0-4]\d|25[0-5])\]))$/,
+       //     valid_credit_card_regex;
+
 
         // Constructor
 
@@ -18,31 +23,29 @@ define(
 
             is_empty_string : function(str){
 
+                 return str.length === 0 ;
 
-                return str.length == 0 ? true : false;
             },
 
             test_regex : function(str,reg){
-                console.log("here");
 
-                     return  reg.test(str) ? true : false ;
+                 return  reg.test(str);
 
             },
 
             string_length_match: function(str, len){
 
-                return str.length === len ? true:false;
+                 return str.length === len ;
             }
 
        };
 
 
-        // -------------------------------------------------- //
-        // -------------------------------------------------- //
-
 
         // Return the module constructor.
         return( Validation );
+
+        // -------------------------------------------------- //
 
 
     }
